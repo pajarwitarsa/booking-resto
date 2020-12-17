@@ -1,4 +1,4 @@
-const {User, Restaurant} = require('../models/');
+const {User, Restaurant, Booking} = require('../models/');
 
 class Controller {
   static showLoginForm(req, res) {
@@ -61,7 +61,6 @@ class Controller {
     const {id} = req.params
     Restaurant.findByPk(id)
     .then(data=> {
-
       res.render('editFormResto', {resto: data})
     })
   }
@@ -77,6 +76,46 @@ class Controller {
     .catch(err => {
       res.send(err)
     })
+  }
+
+  static bookingFormResto(req, res) {
+    const id = +req.params.id;
+    let restaurant;
+    Restaurant.findByPk(id)
+      .then(data => {
+        restaurant = data;
+        return User.findOne({where: {username: req.session.username}})
+      })
+      .then(user => res.render('bookingForm', {restaurant, user}))
+      .catch(err => res.send(err))
+  }
+
+  static bookNewResto(req, res) {
+    const RestaurantId = +req.params.id;
+    const {date, time, UserId} = req.body;
+    const newBook = {UserId, RestaurantId, UserId, bookingDate: date + ' ' + time};
+    Booking.create(newBook)
+      .then( () => res.redirect('/restaurants'))
+      .catch(err => console.log(err));    
+  }
+
+  static showAllBookings(req, res) {
+    const id = +req.params.id;
+    Restaurant.findOne({
+      where: {id},
+      include: {
+        model: User
+      }
+    })
+      .then(data => res.render('bookingList', {data}))
+      .catch(err => res.send(err))
+  }
+
+  static deleteRestaurant(req, res) {
+    const id = +req.params.id;
+    Restaurant.destroy({where: {id}})
+      .then(res.redirect(`/restaurants`))
+      .catch(err => res.send(err))
   }
 
 }

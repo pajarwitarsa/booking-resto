@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       bookingDate: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       StatusId: {
         type: Sequelize.INTEGER,
