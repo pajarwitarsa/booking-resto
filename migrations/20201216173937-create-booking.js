@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Bookings', {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.createTable('Bookings', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -13,6 +13,12 @@ module.exports = {
       },
       RestaurantId: {
         type: Sequelize.INTEGER
+      },
+      ZomatoRestoId: {
+        type: Sequelize.INTEGER
+      },
+      BookingDate: {
+        type: Sequelize.DATE
       },
       Time: {
         type: Sequelize.INTEGER
@@ -30,7 +36,7 @@ module.exports = {
       }
     });
   },
-  down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Bookings');
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.dropTable('Bookings');
   }
 };
