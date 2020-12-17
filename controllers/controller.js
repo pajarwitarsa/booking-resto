@@ -24,7 +24,7 @@ class Controller {
       res.send('Password Doesnt Match');
     } else {
       User.create(newUser)
-      .then( () => res.redirect('/home'))
+      .then( () => res.redirect('/login'))
       .catch(err => {
         if(err.name === 'SequelizeValidationError') {
           const errors = err.errors.map(error => error.message);
@@ -36,17 +36,24 @@ class Controller {
     }    
   }
   static login (req,res) {
-    const {username, password} =req.body
-    User.findOne({where: {username, password}})
+    const {username, password} = req.body
+    User.findOne({where: {username}})
     .then((data) => {
-      if(data) {
+      if(data && User.comparePass(password, data.password)) {
         req.session.username = username
-        res.redirec("/home")
+        res.redirect("/home")
+      } else {
+        res.send('Username Atau Password Salah');
       }
     })
-    .catch((err) => {
-      res.send(err)
+    .catch(err => {
+      console.log(err);
     })
+  }
+
+  static logout(req, res) {
+    delete req.session.username;
+    res.redirect('/login');
   }
   
 }
