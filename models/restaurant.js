@@ -11,8 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Restaurant.hasMany(models.User, {
-        through: models.Booking
+      Restaurant.belongsToMany(models.User, {
+        through: models.Booking,
+        foreignKey: "RestaurantId"
       })
     }
     generateAmPm(value){
