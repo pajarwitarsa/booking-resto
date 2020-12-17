@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Restaurants extends Model {
+  class Restaurant extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,8 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Restaurant.hasMany(models.User, {
+        through: models.Booking
+      })
     }
-
     generateAmPm(value){
       
       if(value < 13) {
@@ -22,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   };
-  Restaurants.init({
+  Restaurant.init({
     name: DataTypes.STRING,
     address: DataTypes.STRING,
     phone: DataTypes.STRING,
@@ -32,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
     StatusId: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'Restaurants',
+    modelName: 'Restaurant',
   });
-  return Restaurants;
+  return Restaurant;
 };
