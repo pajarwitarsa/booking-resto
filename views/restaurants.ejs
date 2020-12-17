@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurants</title>
+</head>
+<body>
+  <%- include('partials/navbar') %>  
+  <h3>List Restaurants</h3>
+  <table border="1">
+    <tr>
+      <th>No</th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Phone</th>
+      <th>Open</th>
+      <th>Close</th>
+      <th>Action</th>
+    </tr>
+
+    <% data.forEach((elem,i) => { %>
+      <tr>
+        <td><%= i+1 %> </td>
+        <td style="text-align: center;"><%= elem.name %> </td>
+        <td style="text-align: center;"><%= elem.address %></td>
+        <td style="text-align: center;"><%= elem.phone %></td>
+        <td style="text-align: center;"><%= elem.generateAmPm(elem.opening_hours) %></td>
+        <td style="text-align: center;"><%= elem.generateAmPm(elem.closing_hours)%></td>
+        <td style="text-align: center;"><a href="/restaurants/booking/<%= elem.id %>">Booking</a> | <a href="restaurants/edit/<%= elem.id %>">Edit</a>
+          | <a href="restaurants/bookingList/<%= elem.id %>">Booking List</a> | <a href="restaurants/delete/<%= elem.id %>">Delete</a>
+        </td>
+        
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>
