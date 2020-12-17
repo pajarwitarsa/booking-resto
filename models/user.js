@@ -1,5 +1,7 @@
 'use strict';
 const hashPassword = require('../helpers/hashPassword')
+const bcrypt = require('bcryptjs')
+const salt = bcrypt.genSaltSync(10)
 const {
   Model
 } = require('sequelize');
@@ -12,6 +14,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+    }
+    static comparePass(password, hash) {
+      return bcrypt.compareSync(password, hash);
     }
   };
   User.init({
