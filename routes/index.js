@@ -22,6 +22,8 @@ router.use(auth);
 
 router.get('/home', Controller.showHomePage);
 router.get('/restaurants', Controller.showRestoList);
+router.get('/restaurants/edit/:id', Controller.editFormResto);
+router.post('/restaurants/edit/:id', Controller.updateResto);
 
 
 module.exports = router;

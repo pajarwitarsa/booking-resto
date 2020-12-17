@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      User.belongsToMany(models.Restaurant, {
+        through: models.Booking,
+        foreignKey:"UserId"
+      })
     }
     static comparePass(password, hash) {
       return bcrypt.compareSync(password, hash);

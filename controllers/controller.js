@@ -1,4 +1,4 @@
-const {User, Restaurants} = require('../models/');
+const {User, Restaurant} = require('../models/');
 
 class Controller {
   static showLoginForm(req, res) {
@@ -13,7 +13,7 @@ class Controller {
   }
 
   static showRestoList(req, res) {
-    Restaurants.findAll()
+    Restaurant.findAll()
       .then(data => res.render('restaurants', {data}))
   }
 
@@ -35,6 +35,7 @@ class Controller {
       });
     }    
   }
+  
   static login (req,res) {
     const {username, password} = req.body
     User.findOne({where: {username}})
@@ -55,7 +56,29 @@ class Controller {
     delete req.session.username;
     res.redirect('/login');
   }
+
+  static editFormResto (req,res) {
+    const {id} = req.params
+    Restaurant.findByPk(id)
+    .then(data=> {
+
+      res.render('editFormResto', {resto: data})
+    })
+  }
   
+  static updateResto (req,res) {
+    const {name,address, phone,opening_hours, closing_hours } = req.body
+    const updateResto = {name,address, phone,opening_hours, closing_hours }
+    const {id} = req.params
+    Restaurant.update(updateResto, {where: {id}})
+    .then(data => {
+      res.redirect('/restaurants')
+    })
+    .catch(err => {
+      res.send(err)
+    })
+  }
+
 }
 
 module.exports = Controller;
