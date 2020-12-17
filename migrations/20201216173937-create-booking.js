@@ -14,14 +14,8 @@ module.exports = {
       RestaurantId: {
         type: Sequelize.INTEGER
       },
-      ZomatoRestoId: {
-        type: Sequelize.INTEGER
-      },
-      BookingDate: {
+      bookingDate: {
         type: Sequelize.DATE
-      },
-      Time: {
-        type: Sequelize.INTEGER
       },
       StatusId: {
         type: Sequelize.INTEGER
