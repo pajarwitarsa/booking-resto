@@ -18,9 +18,12 @@ module.exports = (sequelize, DataTypes) => {
     }
     generateAmPm(value){
       
-      if(value < 13) {
+      if(value < 12) {
         return value + ' AM';
-      } else {
+      } else if (value === 12) {
+        return value + ' PM';
+      }      
+      else {
         return value - 12 + ' PM';
       }
     }

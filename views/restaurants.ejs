@@ -8,7 +8,6 @@
 <body>
   <%- include('partials/navbar') %>  
   <h3>List Restaurants</h3>
-  <h4><a href="restaurants/add">Add New Restaurant</a></h4>
   <table border="1">
     <tr>
       <th>No</th>
@@ -28,7 +27,9 @@
         <td style="text-align: center;"><%= elem.phone %></td>
         <td style="text-align: center;"><%= elem.generateAmPm(elem.opening_hours) %></td>
         <td style="text-align: center;"><%= elem.generateAmPm(elem.closing_hours)%></td>
-        <td style="text-align: center;"><a href="/restaurants/booking/<%= elem.id %>">Booking</a> | <a href="restaurants/edit/<%= elem.id %>">Edit</a></td>
+        <td style="text-align: center;"><a href="/restaurants/booking/<%= elem.id %>">Booking</a> | <a href="restaurants/edit/<%= elem.id %>">Edit</a>
+          | <a href="restaurants/bookingList/<%= elem.id %>">Booking List</a> | <a href="restaurants/delete/<%= elem.id %>">Delete</a>
+        </td>
         
       </tr>
     <% }) %>
