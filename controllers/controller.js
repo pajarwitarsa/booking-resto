@@ -1,4 +1,4 @@
-const {User} = require('../models/');
+const {User, Restaurants} = require('../models/');
 
 class Controller {
   static showLoginForm(req, res) {
@@ -13,15 +13,27 @@ class Controller {
   }
 
   static showRestoList(req, res) {
-
+    Restaurants.findAll()
+      .then(data => res.render('restaurants', {data}))
   }
 
   static register(req, res) {    
     const {username, password, rePassword, first_name, last_name} = req.body;
     const newUser = {username, password, rePassword, first_name, last_name};
-    User.create(newUser)
+    if(password !== rePassword) {
+      res.send('Password Doesnt Match');
+    } else {
+      User.create(newUser)
       .then( () => res.redirect('/home'))
-      .catch(err => console.log(err));
+      .catch(err => {
+        if(err.name === 'SequelizeValidationError') {
+          const errors = err.errors.map(error => error.message);
+          res.send(errors)
+        } else {
+          res.send(err)
+        }
+      });
+    }    
   }
 }
 

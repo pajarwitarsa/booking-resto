@@ -12,6 +12,15 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
+
+    generateAmPm(value){
+      
+      if(value < 13) {
+        return value + ' AM';
+      } else {
+        return value - 12 + ' PM';
+      }
+    }
   };
   Restaurants.init({
     name: DataTypes.STRING,
