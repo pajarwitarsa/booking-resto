@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Restaurant</title>
+</head>
+<body>
+    <h1>Edit Restaurant</h1>
+    <form action="/restaurants/edit/<%= resto.id %>" method="POST">
+    <label for="">Name</label>
+    <br>
+    <input type="text" name="name" id="name" value="<%= resto.name %>">
+    <br>
+    <br>
+    <label for="">Location</label>
+    <br>
+    <input type="text" name="address" id="address" value="<%= resto.address %>">
+    <br>
+    <br>
+    <label for="">Phone</label>
+    <br>
+    <input type="text" name="phone" id="phone" value="<%= resto.phone %>">
+    <br>
+    <br>
+    <label for="">Open Hours</label>
+    <br>
+    <input type="number" name="opening_hours" id="opening_hours" value="<%= resto.opening_hours %>">
+    <br>
+    <br>
+    <label for="">Close Hours</label>
+    <br>
+    <input type="number" name="closing_hours" id="closing_hours" value="<%= resto.closing_hours %>">
+    <br>
+    <input type="Submit">
+    
+    </form>
+    
+</body>
+</html>
