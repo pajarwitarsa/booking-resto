@@ -14,6 +14,12 @@ module.exports = {
       RestaurantId: {
         type: Sequelize.INTEGER
       },
+      ZomatoRestoId: {
+        type: Sequelize.INTEGER
+      },
+      BookingDate: {
+        type: Sequelize.DATE
+      },
       Time: {
         type: Sequelize.INTEGER
       },

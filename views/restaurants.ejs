@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurants</title>
+</head>
+<body>
+  <%- include('partials/navbar') %>  
+  <h3>List Restaurants</h3>
+
+  <table border="1">
+    <tr>
+      <th>No</th>
+      <th>Name</th>
+      <th>Location</th>
+    </tr>
+
+    <% restos.forEach((elem,i) => { %>
+      <tr>
+        <td><%= i+1 %> </td>
+        <td style="text-align: center;"><%= elem.restaurant.name %> </td>
+        <td style="text-align: center;"><%= elem.restaurant.location.address %></td>
+        <td style="text-align: center;"><%= elem.restaurant.location.address %></td>
+        
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>

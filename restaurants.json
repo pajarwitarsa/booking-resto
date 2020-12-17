@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Bottega Ristorante",
+    "address": "Fairgrounds, SCBD Lot 14, Jl. Jenderal Sudirman, SCBD, Jakarta 12190",
+    "phone": "021 51402266, 0821 10050006, 0812 97122350",
+    "city": "Jakarta",
+    "opening_hours": 11,
+    "closing_hours": 22,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "SKYE",
+    "address": "Menara BCA, Lantai 56, Jl. MH. Thamrin, Thamrin, Jakarta",
+    "phone": "021 23586996",
+    "city": "Jakarta",
+    "opening_hours": 17,
+    "closing_hours": 22,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "WAKI Japanese BBQ Dining",
+    "address": "Lantai 1, Jl. Tanjung Karang No. 5, Thamrin, Jakarta",
+    "phone": "0812 90109624",
+    "city": "Jakarta",
+    "opening_hours": 11,
+    "closing_hours": 22,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "3 Wise Monkeys",
+    "address": "Jl. Senopati No. 46, Senopati, Jakarta",
+    "phone": "081 211777746",
+    "city": "Jakarta",
+    "opening_hours": 11,
+    "closing_hours": 22,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "Hause Rooftop",
+    "address": "MD Place Bulding, Lantai 6, Jl. Setiabudi Selatan No. 7, Kuningan, Jakarta",
+    "phone": "021 29529852",
+    "city": "Jakarta",
+    "opening_hours": 11,
+    "closing_hours": 22,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "GIOI",
+    "address": "Jl. Senopati Raya No. 88, Senopati, Jakarta 12190",
+    "phone": "021 7211468, 021 7211480",
+    "city": "Jakarta",
+    "opening_hours": 11,
+    "closing_hours": 22,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "Lawless Burgerbar",
+    "address": "Jl. Kemang Selatan VIII No. 67H-67I, Kemang, Jakarta",
+    "phone": "0813 81121602",
+    "city": "Jakarta",
+    "opening_hours": 11,
+    "closing_hours": 23,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "Henshin - The Westin Jakarta",
+    "address": "The Westin Jakarta, Lantai 67-69, Jl. H. R. Rasuna Said, Kuningan, Jakarta 12940",
+    "phone": "021 27887768, 021 27887788",
+    "city": "Jakarta",
+    "opening_hours": 10,
+    "closing_hours": 22,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "Tucano's Churrascaria - Brazilian BBQ & Buffet",
+    "address": "Pavilion Retail Arcade, Lantai Dasar,  Jl. K.H Mas Mansyur, Sudirman, Jakarta",
+    "phone": "021 29023398, 0812 95634069",
+    "city": "Jakarta",
+    "opening_hours": 11,
+    "closing_hours": 21,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "Le Quartier",
+    "address": "Jl. Gunawarman No. 34, Senopati, Jakarta",
+    "phone": "021 72788001, 021 72788003",
+    "city": "Jakarta",
+    "opening_hours": 10,
+    "closing_hours": 20,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "Sofia at The Gunawarman",
+    "address": "The Gunawarman, Jl. Gunawarman No. 3, Senopati, Jakarta 12110",
+    "phone": "0812 91615433, 021 22770007",
+    "city": "Jakarta",
+    "opening_hours": 10,
+    "closing_hours": 20,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "Okuzono",
+    "address": "Jl. Suryo No. 1, Senopati, Jakarta",
+    "phone": "021 27933565",
+    "city": "Jakarta",
+    "opening_hours": 11,
+    "closing_hours": 21,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "The Edge",
+    "address": "Kemang Icon Building, Lantai 5, Jl. Kemang Raya I, Kemang, Jakarta",
+    "phone": "021 7197989",
+    "city": "Jakarta",
+    "opening_hours": 10,
+    "closing_hours": 20,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "Lemongrass",
+    "address": "Jl. Raya Pajajaran No. 21, Bogor Utara, Bogor",
+    "phone": "0251 8328800, 0878 72020440",
+    "city": "Bogor",
+    "opening_hours": 10,
+    "closing_hours": 20,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "Twinhouse",
+    "address": "Jl. Cipete Raya No. 4B, Fatmawati, Jakarta",
+    "phone": "021 22702131, 0819 31173518",
+    "city": "Jakarta",
+    "opening_hours": 10,
+    "closing_hours": 22,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "Social House",
+    "address": "Grand Indonesia Mall, East Mall, Lantai 1, Jl. M. H. Thamrin No. 1, Thamrin, Jakarta",
+    "phone": "0858 17710002, 021 23581818",
+    "city": "Jakarta",
+    "opening_hours": 11,
+    "closing_hours": 23,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "Toodz House",
+    "address": "Jl. Cipete Raya No. 79, Fatmawati, Jakarta",
+    "phone": "021 75904015",
+    "city": "Jakarta",
+    "opening_hours": 11,
+    "closing_hours": 21,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "Bunga Rampai",
+    "address": "Jl. Teuku Cik Ditiro No. 35, Menteng, Jakarta",
+    "phone": "021 31926224, 021 31926225",
+    "city": "Jakarta",
+    "opening_hours": 11,
+    "closing_hours": 23,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "MammaRosy",
+    "address": "Jl. Kemang Raya No. 58, Kemang, Jakarta",
+    "phone": "021 71791592",
+    "city": "Jakarta",
+    "opening_hours": 11,
+    "closing_hours": 22,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  },
+  {
+    "name": "The Neighbourhood",
+    "address": "Jl. Cipaku I No. 85, Dharmawangsa, Jakarta 12170",
+    "phone": "021 27081258",
+    "city": "Jakarta",
+    "opening_hours": 10,
+    "closing_hours": 22,
+    "createdAt": "2020-12-17T10:48:38.056Z",
+    "updatedAt": "2020-12-17T10:48:38.056Z"
+  }
+]
