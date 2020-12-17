@@ -9,6 +9,8 @@ router.get('/register', Controller.showRegisterForm)
 router.post('/register', Controller.register);
 
 router.get('/login', Controller.showLoginForm);
+router.post('/login', Controller.login)
+
 router.get('/home', Controller.showHomePage);
 router.get('/restaurants', Controller.showRestoList);
 

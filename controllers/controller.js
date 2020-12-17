@@ -23,6 +23,20 @@ class Controller {
       .then( () => res.redirect('/home'))
       .catch(err => console.log(err));
   }
+  static login (req,res) {
+    const {username, password} =req.body
+    User.findOne({where: {username, password}})
+    .then((data) => {
+      if(data) {
+        req.session.username = username
+        res.redirec("/home")
+      }
+    })
+    .catch((err) => {
+      res.send(err)
+    })
+  }
+  
 }
 
 module.exports = Controller;
